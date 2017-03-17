@@ -1,0 +1,411 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9BCC6FC6-2465-4AF1-90D5-3010BBCBEE14}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>systemWindows</RootNamespace>
+    <AssemblyName>systemWindows</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Words, Version=6.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Aspose.Words.dll</HintPath>
+    </Reference>
+    <Reference Include="CSkin">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio 11.0\CSkin 4.0\CSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.9.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\download_dll\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="costAnalysisForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="costAnalysisForm.Designer.cs">
+      <DependentUpon>costAnalysisForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Database1DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database1DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Database2DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database2DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Database2DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database2DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Database2DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database2DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Database2DataSet31.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database2DataSet31.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Database2DataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database2DataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Database2DataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database2DataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DatabasePolicyStab.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatabasePolicyStab.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetMoneyBack.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetMoneyBack.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EnterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnterForm.Designer.cs">
+      <DependentUpon>EnterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GradeEvaluateMethodForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GradeEvaluateMethodForm.Designer.cs">
+      <DependentUpon>GradeEvaluateMethodForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinMultiReaEvaluateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MinMultiReaEvaluateForm.Designer.cs">
+      <DependentUpon>MinMultiReaEvaluateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KeyReasonEvaluateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KeyReasonEvaluateForm.Designer.cs">
+      <DependentUpon>KeyReasonEvaluateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InvestObstacleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InvestObstacleForm.Designer.cs">
+      <DependentUpon>InvestObstacleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReasonEvaluateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReasonEvaluateForm.Designer.cs">
+      <DependentUpon>ReasonEvaluateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllMethodForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllMethodForm.Designer.cs">
+      <DependentUpon>AllMethodForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="hotColdMethod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hotColdMethod.Designer.cs">
+      <DependentUpon>hotColdMethod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SampleEvaluateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SampleEvaluateForm.Designer.cs">
+      <DependentUpon>SampleEvaluateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SimilarMethodForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SimilarMethodForm.Designer.cs">
+      <DependentUpon>SimilarMethodForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicMethodForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DynamicMethodForm.Designer.cs">
+      <DependentUpon>DynamicMethodForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MultiReasonResolveForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MultiReasonResolveForm.Designer.cs">
+      <DependentUpon>MultiReasonResolveForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GreyCompareForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GreyCompareForm.Designer.cs">
+      <DependentUpon>GreyCompareForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfitReasonMethodForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfitReasonMethodForm.Designer.cs">
+      <DependentUpon>ProfitReasonMethodForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="progressBarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="progressBarForm.Designer.cs">
+      <DependentUpon>progressBarForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="costAnalysisForm.resx">
+      <DependentUpon>costAnalysisForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnterForm.resx">
+      <DependentUpon>EnterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllMethodForm.resx">
+      <DependentUpon>AllMethodForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GradeEvaluateMethodForm.resx">
+      <DependentUpon>GradeEvaluateMethodForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GreyCompareForm.resx">
+      <DependentUpon>GreyCompareForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hotColdMethod.resx">
+      <DependentUpon>hotColdMethod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvestObstacleForm.resx">
+      <DependentUpon>InvestObstacleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KeyReasonEvaluateForm.resx">
+      <DependentUpon>KeyReasonEvaluateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MinMultiReaEvaluateForm.resx">
+      <DependentUpon>MinMultiReaEvaluateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiReasonResolveForm.resx">
+      <DependentUpon>MultiReasonResolveForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfitReasonMethodForm.resx">
+      <DependentUpon>ProfitReasonMethodForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReasonEvaluateForm.resx">
+      <DependentUpon>ReasonEvaluateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SampleEvaluateForm.resx">
+      <DependentUpon>SampleEvaluateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SimilarMethodForm.resx">
+      <DependentUpon>SimilarMethodForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DynamicMethodForm.resx">
+      <DependentUpon>DynamicMethodForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="progressBarForm.resx">
+      <DependentUpon>progressBarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Database1DataSet.xsc">
+      <DependentUpon>Database1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Database1DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Database1DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Database1DataSet.xss">
+      <DependentUpon>Database1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Database2DataSet.xsc">
+      <DependentUpon>Database2DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Database2DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Database2DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Database2DataSet.xss">
+      <DependentUpon>Database2DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Database2DataSet1.xsc">
+      <DependentUpon>Database2DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Database2DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Database2DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Database2DataSet1.xss">
+      <DependentUpon>Database2DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Database2DataSet2.xsc">
+      <DependentUpon>Database2DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Database2DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Database2DataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Database2DataSet2.xss">
+      <DependentUpon>Database2DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Database2DataSet31.xsc">
+      <DependentUpon>Database2DataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="Database2DataSet31.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Database2DataSet31.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Database2DataSet31.xss">
+      <DependentUpon>Database2DataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="Database2DataSet4.xsc">
+      <DependentUpon>Database2DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Database2DataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Database2DataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Database2DataSet4.xss">
+      <DependentUpon>Database2DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Database2DataSet5.xsc">
+      <DependentUpon>Database2DataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="Database2DataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Database2DataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Database2DataSet5.xss">
+      <DependentUpon>Database2DataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="DatabasePolicyStab.xsc">
+      <DependentUpon>DatabasePolicyStab.xsd</DependentUpon>
+    </None>
+    <None Include="DatabasePolicyStab.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatabasePolicyStab.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DatabasePolicyStab.xss">
+      <DependentUpon>DatabasePolicyStab.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetMoneyBack.xsc">
+      <DependentUpon>DataSetMoneyBack.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetMoneyBack.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetMoneyBack.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetMoneyBack.xss">
+      <DependentUpon>DataSetMoneyBack.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SCBJ_030006.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Database1.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\sampleEvaluate.jpg" />
+    <None Include="Resources\reasonEvaluate.jpg" />
+    <None Include="Resources\multiReason.jpg" />
+    <None Include="Resources\keyReason1.jpg" />
+    <None Include="Resources\keyReason.jpg" />
+    <None Include="Resources\hotCold.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
